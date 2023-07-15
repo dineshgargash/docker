@@ -1,7 +1,7 @@
 services:
   
   web:
-    image: "rachna:latest"
+    image: "ubuntu/apache2"
     ports:
       - "7000:80"
       
