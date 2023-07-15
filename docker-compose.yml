@@ -1,5 +1,9 @@
 services:
+  
   web:
     image: rachna:latest
     ports:
       - "7000:80"
+      
+    
+ 
