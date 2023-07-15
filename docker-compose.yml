@@ -1,7 +1,7 @@
 services:
   
   web:
-    image: rachna:latest
+    image: "rachna:latest"
     ports:
       - "7000:80"
       
