@@ -23,6 +23,7 @@ pipeline{
                 sh "docker login -u ${env.uname} -p ${env.pwd}"
                 sh "docker push ${env.uname}/dinesh:latest"
                 }
+                sh " docker compose down && docker compose up "
                 
                 
                 
