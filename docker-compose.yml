@@ -2,7 +2,7 @@ version: '2.0'
 services:
   
   web:
-    image: "rachna"
+    image: "dsharma52/dinesh:latest"
     ports:
       - "7000:80"
       
