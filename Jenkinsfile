@@ -11,12 +11,24 @@ pipeline{
             steps{
                 echo "build is in progersss"
                 sh 'docker build -t rachna .'
-                sh 'docker-compose down && docker-compose up -d'
+                
                 
             }
         }
+        stage("deploy to docker hub"){
+            steps{
+                echo "deploy in progress"
+                withCredentials([usernamePassword(credentialsId: 'ddt', passwordVariable: 'pwd', usernameVariable: 'uname')])
+                sh "docker tag rachna ${env.uname}/dinesh:latest"
+                sh "docker login -u ${env.uname} -p ${env.pwd}"
+                sh "docker push ${env.uname}/dinesh:latest"
+                
+                
+                
     }
-    
+
+    }
+    }  
 }
 
     
